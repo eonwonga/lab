@@ -1,0 +1,201 @@
+
+@media only screen and (min-width: 1px) and (max-width: 575px) {
+  .wrap {
+    width: 100%;
+  }
+}
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+/* Center the loading container */
+#loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Fixed positioning to center on the screen */
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the container */
+ /* background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Style the loading GIF */
+.loading-gif {
+  width: 50px; /* Set a small size */
+  height: 50px; /* Set a small size */
+  margin-bottom: 10px; /* Space between the GIF and text */
+}
+
+/* Hide the container by default */
+.hide {
+  display: none;
+}
+  .offer-card {
+    /* margin: 10px auto;
+    
+    background-color: rgb(206, 54, 236);
+     box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.25); 
+    background-image: linear-gradient(to right, rgb(18, 219, 11), rgba(255, 255, 255, .2));
+    color: #000000;
+    padding: 10pt;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+
+
+     background-color: #fff;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; */
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.offer-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center; /* Centers the cards */
+  gap: 10px; /* Adds space between cards */
+}
+
+.offer-card {
+  flex: 1 1 30%; /* Responsive width */
+  max-width: 150px; /* Limits width of each card */
+}
+.deal-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.get-deal {
+  background-color: #020a13;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-deal:hover {
+  background-color: #021529;
+}
+  .deal-text {
+    margin: 0;
+    font-size: 14px;
+  }
+  .get-deal {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+  }
+
+  .daraja-status {
+    text-align: center;
+    margin: 3pt auto;
+  }
+  .daraja-status.track {
+    background-color: #eed59d;
+    color: rgb(82, 80, 80);
+  }  
+  
+.checkout-options {
+  margin: 5pt 2pt;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.checkout-options button {
+  width: 1.5in;
+  padding: 5pt;
+  font-weight: 600;
+  outline: 2pt solid;
+  /* border-radius: 3pt; */
+  color: #fff;
+  border: 2pt solid #fff;
+  cursor: pointer;
+  /* background-color: #008e13; */
+}
+.checkout-options button:hover {
+  outline: 1pt solid #3f9eeb;
+}
+#cancel {
+  background-color: #3e4d59;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.daraja-status {
+  text-align: center;
+  margin: 3pt auto;
+}
+.daraja-status.track {
+  background-color: #eed59d;
+  color: rgb(82, 80, 80);
+}
+.loading-gif {
+  width: 50px;
+  height: 50px;
+  align-content: center;
+}
+.networkname-banner{
+  background-color: rgba(255, 255, 255, .8);
+  font-size: 150%;
+}
+.hide {
+  display: none;
+}

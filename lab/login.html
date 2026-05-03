@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <title>BestRadius Login</title>  
+    <link rel="stylesheet" href="assets/css/style1.css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">  -->
+     <script src="assets/js/login.js" defer></script>
+    <script src="assets/js/daraja.js" defer></script>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background: url('assets/img/datacenter.webp') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .btn-primary {
+         width: 100%;
+         padding: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="bgimg">
+        <img src="assets/img/datacenter.webp" alt="data center image" />
+      </div> -->
+    <div class="login-container">
+        $(if chap-id)
+        <form class="hide" name="sendin" action="$(link-login-only)" method="post">
+          <input type="hidden" name="username" />
+          <input type="hidden" name="password" />
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+        </form>
+      
+        <script src="./md5.js"></script>
+        <script>
+          function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+          }
+      
+        </script>
+        $(endif)
+        <h1>SECTOR FIVE LAB</h1>
+        <!-- <p>HOTSPOT LOGIN</p> -->
+        <h6>Select Your Package or </h6>
+            <h6>Provide Username & Password to continue!</h6>
+            <h2>Customer Care: <b>0114341508</b></h2>
+  <div class="bgimg">
+    <img src="assets/img/datacenter.webp" alt="data center image" />
+    <!-- data-productid="3600" -->
+  </div>
+  <div class="bgimg">
+    <img src="assets/img/datacenter.webp" alt="data center image" />
+  </div>
+                <div class="offer-container">                    
+                        <div class="offer-card" data-amount="10" data-productid="3600" onclick="selectPackage(this)">
+                             <p class="card-title deal-text">1.  Hr  </p>
+                             <p class="card-text">Ksh. 10 </p>
+                             <p class="card-text">Valid 1 Hour </p>
+                            <!-- <p class="deal-text">Testing Unlimited</p> -->
+                            <button class="get-deal btn btn-primary">BUY</button>
+                        </div>
+                        <div class="offer-card" data-amount="20" data-productid="21600" onclick="selectPackage(this)">
+                            <p class="card-title deal-text">6 Hr </p>
+                            <p class="card-text">Ksh. 20 </p>
+                             <p class="card-text">Valid 6 hour </p>
+                            <button class="get-deal btn btn-primary">BUY</button>
+                        </div>
+                        <div class="offer-card" data-amount="50" data-productid="86400" onclick="selectPackage(this)">
+                            <p class="card-title deal-text">24 Hour </p>
+                            <p class="card-text">Ksh. 50 </p>
+                             <p class="card-text">Valid 24 hour </p>
+                            <button class="get-deal btn btn-primary">BUY</button>
+                        </div> 
+                        <div class="offer-card" data-amount="70" data-productid="172800" onclick="selectPackage(this)">
+                            <p class="card-title deal-text">48 Hr </p>
+                            <p class="card-text">Ksh. 70 </p>
+                             <p class="card-text">Valid 2 Days </p>
+                            <button class="get-deal btn btn-primary">BUY</button>
+                        </div>                   
+                         <div class="offer-card" data-amount="250" data-productid="604800" onclick="selectPackage(this)">
+                            <p class="card-title deal-text">1 WEEK </p>
+                            <p class="card-text">Ksh. 250 </p>
+                             <p class="card-text">Valid 1 week </p>
+                            <button class="get-deal btn btn-primary">BUY</button>
+                        </div>
+                        
+                        <div class="offer-card" data-amount="700" data-productid="2629800" onclick="selectPackage(this)">
+                            <p class="card-title deal-text">1 Mon </p>
+                            <p class="card-text">Ksh. 700 </p>
+                             <p class="card-text">Valid 1 Month </p>
+                            <button class="get-deal btn btn-primary">BUY</button>
+                        </div>
+                    </div>              
+                    <div class="form-group">
+                        <span id="enter-mpesa-code">Already Paid? Enter/Paste M-PESA Transaction Code/Message to Get
+                          Connected.</span>
+              
+                        <div class="mpesa-code">
+                          <label for="mpesa-code">
+                            <input type="text" required name="mpesa-code" id="mpesa-code" placeholder="E.g RKD2A97GKA"
+                              class=" form-control" />
+                          </label>
+                          <button class="btn btn-dark" type="button" id="search-api-button">Search</button>
+                        </div>
+                        <p class="response-from-search"></p>
+                      </div>
+                      <hr>
+                      <!-- <h3>Already Paid?</h3> -->
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter M-PESA Code" required>
+                    </div> -->
+
+                    <!-- <button class="btn btn-dark">Verify Payment</button> -->
+                    
+                    <h1>Voucher</h1>
+                    <form action="/transaction_search" method="post">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="transaction_id" placeholder="Enter Voucher/M-Pesa Transaction ID" required>
+                        </div>
+                        <button class="btn btn-secondary btn-block" type="submit">Search</button>
+                    </form>
+                    <hr>
+                        $(if trial == 'yes')
+                        <p class="subtitle">
+                            Trial available, click
+                            <a class="link" href="$(link-login-only)?dst=$(link-orig-esc)&username=T-$(mac-esc)">here</a>
+                            to access.
+                        </p>
+                        $(endif)                
+                    <hr>
+                    <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif) id="signin-form">
+                        <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />    
+                        <h1>Login </h1>
+                        <div class="form-group">
+                            <label for="username">USERNAME</label>
+                            <input class="form-control" required name="username" id="username" type="text" value="$(username)" placeholder="JSK12354" pattern="^[a-zA-Z0-9]*$" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">PASSWORD</label>
+                            <input class="form-control" name="password" type="password" placeholder="Password" id="password" pattern="^[a-zA-Z0-9]*$" />
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" name="agree" id="agree" checked />
+                            <label class="form-check-label" for="agree">
+                                I have read the <a href="tandc.html" target="_self">Terms and Conditions</a> and I agree to comply with and be bound by them.
+                            </label>
+                        </div>
+                        <button class="btn btn-primary btn-block" type="submit" id="submit-login">Sign In To Network</button>
+                    </form>                 
+
+                    
+                    
+                
+            
+    
+    
+    
+    <div class="overlay" id="overlay"></div>          
+        <div class="popup " id="popup">
+            <span class="close" onclick="closeModal()">&times;Close</span>
+        <div id="loading-container">
+           <!-- <img src="assets/img/saf.gif" alt="Loading..." class="loading-gif"> -->
+              <!-- <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only"></span>
+              </div> -->
+              <p class="loading-gif"></p>
+        </div>
+            <h2 id="packageName"></h2>
+            <p id="packageAmount"></p>
+            
+            <form id="paymentForm">
+                <input type="hidden" name="package" id="packageInput">
+                <input type="hidden" name="amount" id="amountInput">
+                <input type="hidden" name="productId" id="productIdInput">
+
+            
+                <div class="form-group">
+                    <input class="form-control" type="text" name="phone" placeholder="Enter your phone number" required>
+                </div>
+               
+                <div id="error-container" style="color: red; margin-bottom: 10px;"></div>
+                <div id="response-container">
+                    
+                </div>
+                <div class="daraja-status hide track">
+                    <p></p>
+                </div>
+               
+                
+                <div class="checkout-options">
+                    <button class="btn btn-success btn-block" type="submit">Submit</button>
+                    <button class="btn btn-danger btn-block" type="button" onclick="closePopup();resetStatusIndicators(); resetForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    
+    
+    
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script> 
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="./md5.js"></script> -->
+    <script>
+        const server_variables = {
+            "mac-address": "$(mac)",
+            "ip-address": "$(ip)",
+            "hostname": "$(hostname)",
+            "identity": "$(identity)",
+            "login-by": "$(login-by)",
+            "plain-password": "$(plain-passwd)",
+            "server-address": "$(server-address)",
+            "server-name": "$(server-name)",
+            "ssl-login": "$(ssl-login)",
+        };
+        // const server_name = server_variables["server-name"];
+        // const hostname = server_variables["hostname"];
+        // form_template.append("hostname", hostname);
+        // const mac_address = server_variables["mac-address"];
+        //
+        // const server_name = server_variables["server-name"];
+        // const hostname = server_variables["hostname"];
+
+        // function selectPackage(packageName, amount) {
+        //     document.getElementById('packageName').textContent = packageName;
+        //     document.getElementById('packageAmount').textContent = 'Amount: ' + amount + ' BOB';
+        //     document.getElementById('packageInput').value = packageName;
+        //     document.getElementById('amountInput').value = amount;
+        //     document.getElementById('overlay').style.display = 'block';
+        //     document.getElementById('popup').style.display = 'block';
+        // }
+
+        function selectPackage(element) {
+        const packageName = element.querySelector('.deal-text').textContent;
+        const amount = element.getAttribute('data-amount');
+        const productId = element.getAttribute('data-productid');
+
+        document.getElementById('packageName').textContent = packageName;
+        document.getElementById('packageAmount').textContent = 'Amount: ' + amount + ' BOB';
+        document.getElementById('packageInput').value = packageName;
+        document.getElementById('productIdInput').value = productId;
+        document.getElementById('amountInput').value = amount;
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    }
+        // Attach the confirmPurchase function to the form submission
+        document.addEventListener("DOMContentLoaded", () => {
+            const paymentForm = document.getElementById("paymentForm");
+            if (paymentForm) {
+                paymentForm.addEventListener("submit", confirmPurchase);
+            }
+        });
+
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function resetForm() {
+    document.getElementById("paymentForm").reset();
+}
+
+
+    </script>
+    $(if error)
+    <div class="info">
+      <p class="close" onclick="this.parentElement.remove()">
+        <i>
+          <u>Click here to dismiss.</u>
+        </i>
+      </p>
+      <p class="error-msg">$(error)</p>
+    </div>
+    $(endif)
+    </div>
+</body>
+</html>

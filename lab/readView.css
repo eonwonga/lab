@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+}
+#termsLink{
+color:blue;
+font-weight:bold;
+}
+p,label{
+font-weight:bold;
+}
+span{
+padding:20px 0;
+font-style:oblique;
+}
+em,b{
+font-size:140%;
+}
+.title, h2{
+text-align:center;
+text-decoration:underline;
+padding:20px 0;
+}
+.night{
+background-color: #000;
+color: #fff;
+}
+.night a{
+background-color: #fff;
+}
+.main{
+box-sizing: border-box;
+width: 100vw;
+max-width: 6.5in;
+margin: 0 auto;
+text-align: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pack{
+box-sizing: border-box;
+width: 3in;
+min-width: 3in;
+padding: .5em;
+margin: 1em auto;
+border: 1pt dashed;
+}
+.day:not(.night) .left{
+background-color: azure;
+}
+.declaration{
+    margin: 1em auto;
+}
+@media print{
+    .pageBreak{
+        page-break-after: always;
+    }
+}

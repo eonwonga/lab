@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>BestRadius > Connection Status</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<style type="text/css">
+    body {
+        background-color: #f5f7fa;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        padding: 25px 30px;
+        width: 350px;
+        text-align: center;
+    }
+    h2 {
+        margin: 0 0 15px 0;
+        font-size: 20px;
+        color: #444;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+    }
+    td {
+        padding: 8px 6px;
+        font-size: 13px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+    td:first-child {
+        font-weight: bold;
+        color: #666;
+        width: 45%;
+    }
+    .status-msg {
+        margin: 10px 0;
+        font-weight: bold;
+        color: #2a7ae4;
+    }
+    .btn {
+        background: #2a7ae4;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .btn:hover {
+        background: #1f5bbd;
+    }
+    .warning {
+        color: #e63946;
+        font-weight: bold;
+    }
+</style>
+
+<script language="JavaScript">
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+        if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+        popup = open('$(link-advert)', 'hotspot_advert', '');
+        setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+        if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+        window.close();
+        return false;
+    }
+</script>
+</head>
+
+<body
+$(if advert-pending == 'yes')
+    onLoad="openAdvert()"
+$(endif)
+>
+<div class="card">
+    <h2>Connection Status</h2>
+
+    $(if login-by == 'trial')
+        <div class="status-msg">Welcome to your Free Trial!</div>
+    $(elif login-by != 'mac')
+        <div class="status-msg">Hello, $(username)!</div>
+    $(endif)
+
+    <table>
+        <tr><td>IP Address</td><td>$(ip)</td></tr>
+        <tr><td>Data Sent / Received</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+    $(if session-time-left)
+        <tr><td>Connected / Time Left</td><td>$(uptime) / $(session-time-left)</td></tr>
+    $(else)
+        <tr><td>Connected</td><td>$(uptime)</td></tr>
+    $(endif)
+    $(if blocked == 'yes')
+        <tr><td>Status</td><td class="warning"><a href="$(link-advert)" target="hotspot_advert">Advertisement</a> required</td></tr>
+    $(elif refresh-timeout)
+        <tr><td>Status Refresh</td><td>$(refresh-timeout)</td></tr>
+    $(endif)
+    </table>
+
+    $(if login-by-mac != 'yes')
+        <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+            <input type="submit" class="btn" value="Log Out">
+        </form>
+    $(endif)
+</div>
+</body>
+</html>
